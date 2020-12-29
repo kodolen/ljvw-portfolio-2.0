@@ -1,10 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Landing from './containers/landing'
+import About from './containers/about'
+import Cases from './containers/cases'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>Under construction..</h1>
+      <Landing />
+      <About />
+      <Cases />
     </div>
   );
 }
