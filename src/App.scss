@@ -1,7 +1,10 @@
-//main stylesheets
-@import 'style/typography.scss'
+//essential stylesheets
+@import 'style/reset.scss';
+@import 'style/typography.scss';
+@import 'style/colors.scss';
 
 //containers
+@import 'style/containers/landing.scss';
 
 //components
 
