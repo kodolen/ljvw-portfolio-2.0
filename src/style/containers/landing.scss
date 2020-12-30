@@ -114,6 +114,12 @@
 
         svg {
             color: $complimentary-color-dark;
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                transition: all .2s ease-in-out;
+                transform: scale(1.2);
+            }
         }
     }
 }
