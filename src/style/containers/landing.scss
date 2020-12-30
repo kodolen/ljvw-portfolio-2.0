@@ -6,9 +6,34 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+
+    @media (min-width: $tablet) {
+        flex-direction: row-reverse;
+    }
 
     &__img-wrapper {
         width: 70%;
+        position: relative;
+
+        @media (min-width: $tablet) {
+            width: 30%;
+        }
+
+        @media (min-width: $desktop-big) {
+            width: 20%;
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $background-color-light;
+        animation: slideOut 1000ms forwards;
+        z-index: 99;
     }
 
     &__img {
@@ -18,27 +43,77 @@
     &__intro {
         text-align: center;
         width: 80%;
+        padding-top: 1rem;
+        animation: 1000ms fadeIn 1000ms forwards;
+        opacity: 0;
+
+        @media (min-width: $tablet) {
+            width: 50%;
+            text-align: left;
+        }
+
+        @media (min-width: $desktop-big) {
+            width: 30%;
+        }
+        
     }
 
     &__subtitle {
-        font-size: 2.0rem;
+        font-size: 2.4rem;
         line-height: 0;
     }
 
     &__title {
         line-height: 0.6;
+
+        @media (min-width: $tablet) {
+            line-height: 0.8;
+        }
     }
 
     &__text {
-        margin-top: 1rem;
+        margin-top: 1.4rem;
+
+        @media (min-width: $tablet) {
+            padding-right: 3rem;
+        }
+
     }
 
     &__social-icons {
-        margin-top: 2rem;
-        width: 30%;
+        position: absolute;
+        bottom: 1.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.8rem;
+        width: 10rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        font-size: 24px;
+        align-items: center;
+        font-size: 2rem;
+        animation: 1000ms fadeIn 1000ms forwards;
+        opacity: 0;
+
+        a {
+            align-items: center;
+            display: flex;
+        }
+
+        @media (min-width: $tablet) {
+            font-size: 3rem;
+            width: 20rem;
+        }
+
+        @media (min-width: $desktop-big) {
+            transform: none;
+            left: unset;
+            right: 2.4rem;
+            bottom: 2.4rem;
+        }
+
+        svg {
+            color: $complimentary-color-dark;
+        }
     }
 }

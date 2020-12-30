@@ -9,9 +9,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'ssp-light';
     src: url('../assets/fonts/sourcesanspro-light-webfont.woff2') format('woff2'),
@@ -22,9 +19,6 @@
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'ssp-regular';
@@ -38,19 +32,24 @@
 }
 
 body {
-
     font-family: 'ssp-light';
-
+    color: $complimentary-color-dark;
 }
 
 p {
     font-family: 'ssp-light';
     font-size: 1.4rem;
+
+    @media (min-width: $tablet) {
+        font-size: 1.6rem;
+    } 
 }
 
 h1 {
-
     font-family: 'ssp-bold';
-    font-size: 2.2rem;
+    font-size: 2.4rem;
 
+    @media (min-width: $tablet) {
+        font-size: 4rem;
+    }
 }
