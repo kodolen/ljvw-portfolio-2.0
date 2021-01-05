@@ -10,31 +10,33 @@ $mobile: 480px;
 @import 'style/colors.scss';
 @import 'style/typography.scss';
 @import 'style/animations.scss';
+@import 'style/flex-grid';
 
 //containers stylesheets
 @import 'style/containers/landing.scss';
+@import 'style/containers/about.scss';
 
 //components stylesheet
 
 //essential config
 .App {
-
     width: 100%;
 
         .inner {
-
             width: 70%;
             padding-left: 15%;
             padding-right: 15%;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-    
-            // &:nth-child(odd){
+            padding-top: 8rem;
+            padding-bottom: 8rem;
 
-            //     background-color: $grey;
-                
-            // }
-    
+            @media (min-width: $tablet) {
+                padding-top: 12rem;
+                padding-bottom: 12rem;
+            }
+
+            @media (min-width: $laptop) {
+                padding-top: 16rem;
+                padding-bottom: 16rem;
+            }
         }
-
 }
