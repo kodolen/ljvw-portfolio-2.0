@@ -1,0 +1,86 @@
+.cases-container {
+    background-color: $background-color-light;
+
+    &__title {
+        font-size: 3rem;
+        font-family: 'ssp-bold';
+        padding-bottom: 2rem;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        font-family: 'ssp-light';
+        padding-bottom: 2rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-top: 6rem;
+
+        @media (min-width: $tablet) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    a {
+        width: 100%;
+        height: 20rem;
+        margin-bottom: 4rem;
+        position: relative;
+
+        @media (min-width: $tablet) {
+            width: 48%;
+        }
+
+    }
+
+    .no-margin-bot {
+        margin-bottom: 0
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $blue;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: $laptop) {
+            transition: all .2s ease-in-out;
+
+            &:hover{
+                transition: all .2s ease-in-out;
+                opacity: 0;
+            }
+        }
+
+        img {
+            width: 40%;
+        }
+    }
+
+    &__subtitle {
+        position: absolute;
+        left: 1.2rem;
+        bottom: 1.2rem;
+        color: white;
+        font-family: 'ssp-light';
+        font-size: 1.2rem;
+    }
+
+    &__case {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
