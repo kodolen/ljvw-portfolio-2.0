@@ -44,4 +44,14 @@
         margin-bottom: 2rem;
     }
 
+    .show-trigger {
+        opacity: 0;
+    }
+
+    &.show {
+        .show-trigger {
+            animation: fadeIn 600ms forwards;
+        }
+    }
+
 }

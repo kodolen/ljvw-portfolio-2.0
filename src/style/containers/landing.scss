@@ -96,6 +96,10 @@
         }
     }
 
+    &__button-wrapper {
+        margin-top: 2rem;
+    }
+
     &__social-icons {
         position: absolute;
         bottom: 1.4rem;
@@ -134,8 +138,20 @@
 
             &:hover {
                 transition: all 0.2s ease-in-out;
-                transform: scale(1.2);
+                // transform: scale(1.2);
+                color: $blue;
             }
+        }
+    }
+
+    &__logo-wrapper {
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+        width: 6rem;
+
+        img {
+            width: 100%;
         }
     }
 
